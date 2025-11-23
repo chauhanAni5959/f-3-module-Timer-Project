@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Multiple Timers App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <section class="timer-input-section">
+      <h1>Multiple Timers App</h1>
+      <form id="timerForm" autocomplete="off">
+        <label for="hours">Set Time:</label>
+        <input id="hours" name="hours" type="number" min="0" max="99" placeholder="hh" required>
+        <span>:</span>
+        <input id="minutes" name="minutes" type="number" min="0" max="59" placeholder="mm" required>
+        <span>:</span>
+        <input id="seconds" name="seconds" type="number" min="0" max="59" placeholder="ss" required>
+        <button type="submit" id="setBtn">Set</button>
+      </form>
+      <div class="error" id="errorMsg"></div>
+    </section>
+    <section class="timers-section">
+      <button id="showTimersBtn" disabled>Current Timers</button>
+      <div id="timersList">
+        <p class="no-timer-msg">You have no timers currently!</p>
+      </div>
+    </section>
+  </main>
+  <audio id="alarmSound" src="alarm_clock.mp3"></audio>
+  <script src="script.js"></script>
+</body>
+</html>
